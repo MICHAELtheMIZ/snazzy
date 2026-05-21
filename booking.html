@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Snazzy Paws Grooming</title>
+    <link rel="stylesheet" href="styles.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">Snazzy Paws Grooming</a>
+        <input class="nav-toggle" type="checkbox" id="menu-toggle" aria-label="Open navigation menu">
+        <label class="menu-button" for="menu-toggle">Menu</label>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="booking.html">Booking</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+      <a class="book-strip" href="booking.html">Book Now</a>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <h1>Book Your Appointment</h1>
+        <p>Fill out the form below.</p>
+      </section>
+
+      <section class="form-panel">
+        <h2>Booking Request Form</h2>
+
+        <form>
+          <fieldset>
+            <legend>Service Selection</legend>
+
+            <label for="service">Select a service</label>
+            <select id="service" required>
+              <option value="">Choose a service...</option>
+              <option>Bath and Brush</option>
+              <option>Haircut</option>
+              <option>Nail Trim</option>
+              <option>Ear Cleaning</option>
+              <option>Teeth Brushing</option>
+              <option>De-shedding Treatment</option>
+              <option>Flea and Tick Treatment</option>
+              <option>Spa Package</option>
+              <option>Express Service</option>
+              <option>Medicated Bath</option>
+              <option>Special-breed Cuts</option>
+              <option>Puppy Package</option>
+              <option>Senior Dog Package</option>
+              <option>Full Grooming Package</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Pet and Owner Information</legend>
+
+            <label for="owner">Owner's name</label>
+            <input id="owner" type="text" required>
+
+            <label for="email">Email address</label>
+            <input id="email" type="email" required>
+
+            <label for="dog">Dog's name</label>
+            <input id="dog" type="text" required>
+
+            <label for="breed">Breed</label>
+            <input id="breed" type="text" required>
+
+            <label for="age">Age</label>
+            <input id="age" type="number" min="0" required>
+          </fieldset>
+
+          <button class="button primary full" type="submit">Submit Booking Request</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>Snazzy Paws Grooming opening hours:</strong> Monday to Saturday, 9:00 am - 5:00 pm.</p>
+      <p>Hamilton, New Zealand</p>
+    </footer>
+  </body>
+</html>

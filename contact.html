@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Snazzy Paws Grooming</title>
+    <link rel="stylesheet" href="styles.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">Snazzy Paws Grooming</a>
+        <input class="nav-toggle" type="checkbox" id="menu-toggle" aria-label="Open navigation menu">
+        <label class="menu-button" for="menu-toggle">Menu</label>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="booking.html">Booking</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+      <a class="book-strip" href="booking.html">Book Now</a>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="contact-title">
+        <h1 id="contact-title">Contact Us</h1>
+        <p>We would love to hear from you.</p>
+      </section>
+
+      <section class="contact-layout" aria-labelledby="contact-form-title">
+        <div class="form-panel">
+          <h2 id="contact-form-title">Contact Form</h2>
+
+          <form action="#message-sent" method="get">
+            <label for="name">Name</label>
+            <input id="name" required>
+
+            <label for="contact-email">Email address</label>
+            <input id="contact-email" type="email" required>
+
+            <label for="phone">Phone number</label>
+            <input id="phone" type="tel">
+
+            <label for="comment">Comment</label>
+            <textarea id="comment" rows="6" required></textarea>
+
+            <button class="button primary full" type="submit">Send Message</button>
+
+            <div id="message-sent" class="confirmation" role="status" aria-live="polite">
+              Message sent successfully.
+            </div>
+          </form>
+        </div>
+
+        <aside class="map-card" aria-labelledby="map-title">
+          <h2 id="map-title">Hamilton Location Map</h2>
+          <iframe
+            title="Google Map showing Hamilton city centre, New Zealand"
+            src="https://www.google.com/maps?q=Hamilton%20Central%2C%20Hamilton%2C%20New%20Zealand&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>Snazzy Paws Grooming opening hours:</strong> Monday to Saturday, 9:00 am - 5:00 pm.</p>
+      <p>Hamilton, New Zealand</p>
+    </footer>
+  </body>
+</html>
