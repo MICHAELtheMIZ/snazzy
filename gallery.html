@@ -2,116 +2,172 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Browse examples of Snazzy Paws Grooming dog grooming styles, packages and salon images.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Snazzy Paws Grooming</title>
-    <link rel="stylesheet" href="styles.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   </head>
-  <body>
-    <header>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="brand" href="index.html">Snazzy Paws Grooming</a>
-        <input class="nav-toggle" type="checkbox" id="menu-toggle" aria-label="Open navigation menu">
-        <label class="menu-button" for="menu-toggle">Menu</label>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Bootstrap navigation shared across the public pages. -->
+    <header class="bg-white border-bottom sticky-top">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">Snazzy Paws Grooming</a>
 
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="booking.html">Booking</a>
-          <a href="contact.html">Contact</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navigation"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+              <li class="nav-item"><a class="nav-link" href="staff/roster.html">Staff Roster</a></li>
+            </ul>
+            <a class="btn btn-primary ms-lg-3" href="booking.html">Book Now</a>
+          </div>
         </div>
       </nav>
-      <a class="book-strip" href="booking.html">Book Now</a>
     </header>
 
-    <main>
-      <section class="page-hero">
-        <h1>Our Gallery</h1>
-        <p>Examples of grooming styles and treatments.</p>
+    <!-- Main gallery page content. -->
+    <main class="flex-grow-1">
+      <section class="page-hero py-5">
+        <div class="container">
+          <h1 class="display-5 fw-bold">Our Gallery</h1>
+          <p class="lead mb-0">Examples of grooming styles and treatments.</p>
+        </div>
       </section>
 
-      <section>
-        <h2>Filter by</h2>
+      <section class="container py-4" aria-labelledby="filter-title">
+        <h2 class="h4" id="filter-title">Filter by</h2>
 
-        <div class="filter-bar">
-          <button>All</button>
-          <button>Before/After</button>
-          <button>Breed Cuts</button>
-          <button>Spa Treatments</button>
+        <div class="btn-group flex-wrap mb-4" role="group" aria-label="Gallery filter options">
+          <button class="btn btn-primary" type="button">All</button>
+          <button class="btn btn-outline-primary" type="button">Before/After</button>
+          <button class="btn btn-outline-primary" type="button">Breed Cuts</button>
+          <button class="btn btn-outline-primary" type="button">Spa Treatments</button>
         </div>
 
-        <div class="gallery-grid">
-          <figure>
-            <img src="images/bath-brush.jpg" alt="Bath brush grooming example">
-            <figcaption>Bath Brush</figcaption>
-          </figure>
-          <figure>
-            <img src="images/haircut.jpg" alt="Haircut grooming example">
-            <figcaption>Haircut</figcaption>
-          </figure>
-          <figure>
-            <img src="images/nail-trim.jpg" alt="Nail trim grooming example">
-            <figcaption>Nail Trim</figcaption>
-          </figure>
-          <figure>
-            <img src="images/ear-cleaning.jpg" alt="Ear cleaning grooming example">
-            <figcaption>Ear Cleaning</figcaption>
-          </figure>
-          <figure>
-            <img src="images/teeth-brushing.jpg" alt="Teeth brushing grooming example">
-            <figcaption>Teeth Brushing</figcaption>
-          </figure>
-          <figure>
-            <img src="images/deshedding.jpg" alt="Deshedding grooming example">
-            <figcaption>Deshedding</figcaption>
-          </figure>
-          <figure>
-            <img src="images/flea-tick.jpg" alt="Flea tick grooming example">
-            <figcaption>Flea Tick</figcaption>
-          </figure>
-          <figure>
-            <img src="images/spa-package.jpg" alt="Spa package grooming example">
-            <figcaption>Spa Package</figcaption>
-          </figure>
-          <figure>
-            <img src="images/puppy-package.jpg" alt="Puppy package grooming example">
-            <figcaption>Puppy Package</figcaption>
-          </figure>
-          <figure>
-            <img src="images/senior-dog.jpg" alt="Senior dog grooming example">
-            <figcaption>Senior Dog</figcaption>
-          </figure>
-          <figure>
-            <img src="images/full-groom.jpg" alt="Full groom grooming example">
-            <figcaption>Full Groom</figcaption>
-          </figure>
-          <figure>
-            <img src="images/before-after-1.jpg" alt="Before after grooming example">
-            <figcaption>Before After 1</figcaption>
-          </figure>
-          <figure>
-            <img src="images/before-after-2.jpg" alt="Before after grooming example">
-            <figcaption>Before After 2</figcaption>
-          </figure>
-          <figure>
-            <img src="images/breed-cut.jpg" alt="Breed cut grooming example">
-            <figcaption>Breed Cut</figcaption>
-          </figure>
-          <figure>
-            <img src="images/happy-dog.jpg" alt="Happy dog grooming example">
-            <figcaption>Happy Dog</figcaption>
-          </figure>
-          <figure>
-            <img src="images/salon.jpg" alt="Salon grooming example">
-            <figcaption>Salon</figcaption>
-          </figure>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/bath-brush.jpg" alt="Bath brush grooming example">
+              <figcaption class="card-body fw-semibold">Bath Brush</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/haircut.jpg" alt="Haircut grooming example">
+              <figcaption class="card-body fw-semibold">Haircut</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/nail-trim.jpg" alt="Nail trim grooming example">
+              <figcaption class="card-body fw-semibold">Nail Trim</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/ear-cleaning.jpg" alt="Ear cleaning grooming example">
+              <figcaption class="card-body fw-semibold">Ear Cleaning</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/teeth-brushing.jpg" alt="Teeth brushing grooming example">
+              <figcaption class="card-body fw-semibold">Teeth Brushing</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/deshedding.jpg" alt="Deshedding grooming example">
+              <figcaption class="card-body fw-semibold">Deshedding</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/flea-tick.jpg" alt="Flea tick grooming example">
+              <figcaption class="card-body fw-semibold">Flea Tick</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/spa-package.jpg" alt="Spa package grooming example">
+              <figcaption class="card-body fw-semibold">Spa Package</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/puppy-package.jpg" alt="Puppy package grooming example">
+              <figcaption class="card-body fw-semibold">Puppy Package</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/senior-dog.jpg" alt="Senior dog grooming example">
+              <figcaption class="card-body fw-semibold">Senior Dog</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/full-groom.jpg" alt="Full groom grooming example">
+              <figcaption class="card-body fw-semibold">Full Groom</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/before-after-1.jpg" alt="Before after grooming example">
+              <figcaption class="card-body fw-semibold">Before After 1</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/before-after-2.jpg" alt="Before after grooming example">
+              <figcaption class="card-body fw-semibold">Before After 2</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/breed-cut.jpg" alt="Breed cut grooming example">
+              <figcaption class="card-body fw-semibold">Breed Cut</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/happy-dog.jpg" alt="Happy dog grooming example">
+              <figcaption class="card-body fw-semibold">Happy Dog</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="card h-100">
+              <img class="card-img-top gallery-img" src="images/salon.jpg" alt="Salon grooming example">
+              <figcaption class="card-body fw-semibold">Salon</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p><strong>Snazzy Paws Grooming opening hours:</strong> Monday to Saturday, 9:00 am - 5:00 pm.</p>
-      <p>Hamilton, New Zealand</p>
+    <footer class="site-footer mt-auto py-4">
+      <div class="container text-center">
+        <p class="mb-1"><strong>Snazzy Paws Grooming opening hours:</strong> Monday to Saturday, 9:00 am - 5:00 pm.</p>
+        <p class="mb-0">Hamilton, New Zealand</p>
+      </div>
     </footer>
   </body>
 </html>

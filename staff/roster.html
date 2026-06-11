@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Protected Snazzy Paws Grooming staff roster information for weekly salon shifts.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Roster | Snazzy Paws Grooming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Bootstrap navigation shared across the public pages. -->
+    <header class="bg-white border-bottom sticky-top">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="../index.html">Snazzy Paws Grooming</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navigation"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="../gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="../booking.html">Booking</a></li>
+              <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="../privacy.html">Privacy</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="roster.html">Staff Roster</a></li>
+            </ul>
+            <a class="btn btn-primary ms-lg-3" href="../booking.html">Book Now</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main protected roster page content. -->
+    <main class="flex-grow-1">
+      <section class="page-hero py-5">
+        <div class="container">
+          <h1 class="display-5 fw-bold">Staff Roster</h1>
+          <p class="lead mb-0">Weekly roster information for Snazzy Paws Grooming staff.</p>
+        </div>
+      </section>
+
+      <section class="container py-4" aria-labelledby="roster-title">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="h4 card-title" id="roster-title">Roster Week: 17-22 June</h2>
+            <p class="card-text">Salon hours are Monday to Saturday, 9:00 am - 5:00 pm. Staff should check this roster at the start of each week.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle mb-0">
+                <caption>
+                  Staff roster for grooming salon shifts
+                </caption>
+                <thead class="table-primary">
+                  <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Opening Shift</th>
+                    <th scope="col">Closing Shift</th>
+                    <th scope="col">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Monday</th>
+                    <td>Owner 1 and Mia</td>
+                    <td>Owner 2 and Liam</td>
+                    <td>Stock check after closing.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Tuesday</th>
+                    <td>Owner 2 and Liam</td>
+                    <td>Owner 1 and Mia</td>
+                    <td>Senior dog appointments in the afternoon.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Wednesday</th>
+                    <td>Owner 1 and Mia</td>
+                    <td>Owner 2 and Liam</td>
+                    <td>Deep clean hydrobath area.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Thursday</th>
+                    <td>Owner 2 and Mia</td>
+                    <td>Owner 1 and Liam</td>
+                    <td>Follow up online booking requests.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Friday</th>
+                    <td>Owner 1 and Liam</td>
+                    <td>Owner 2 and Mia</td>
+                    <td>Prepare weekend appointment list.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Saturday</th>
+                    <td>Owner 1, Owner 2 and Mia</td>
+                    <td>Owner 1, Owner 2 and Liam</td>
+                    <td>High booking volume expected.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer mt-auto py-4">
+      <div class="container text-center">
+        <p class="mb-1"><strong>Snazzy Paws Grooming opening hours:</strong> Monday to Saturday, 9:00 am - 5:00 pm.</p>
+        <p class="mb-0">Hamilton, New Zealand</p>
+      </div>
+    </footer>
+  </body>
+</html>

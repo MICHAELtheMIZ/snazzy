@@ -1,0 +1,90 @@
+/* Custom theme styles layered over Bootstrap for Snazzy Paws Grooming. */
+:root {
+  --snazzy-blue: #2f80ed;
+  --snazzy-blue-dark: #1f66c2;
+  --snazzy-hero: #eaf4ff;
+  --snazzy-ink: #111827;
+  --snazzy-footer: #1f2937;
+}
+
+body {
+  color: var(--snazzy-ink);
+}
+
+.navbar-brand {
+  background: #d1d5db;
+  border-radius: 0.25rem;
+  padding: 0.45rem 1rem;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--snazzy-blue);
+  --bs-btn-border-color: var(--snazzy-blue);
+  --bs-btn-hover-bg: var(--snazzy-blue-dark);
+  --bs-btn-hover-border-color: var(--snazzy-blue-dark);
+  --bs-btn-active-bg: var(--snazzy-blue-dark);
+  --bs-btn-active-border-color: var(--snazzy-blue-dark);
+}
+
+.text-primary {
+  color: var(--snazzy-blue) !important;
+}
+
+.hero-section,
+.page-hero {
+  background: var(--snazzy-hero);
+}
+
+.hero-image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card,
+.rounded-3 {
+  border-radius: 0.5rem !important;
+}
+
+.gallery-img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.form-card {
+  max-width: 760px;
+}
+
+.map-frame {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  min-height: 360px;
+  width: 100%;
+}
+
+.site-footer {
+  background: var(--snazzy-footer);
+  color: #fff;
+}
+
+/* The success message appears after the contact form targets its fragment id. */
+.confirmation {
+  display: none;
+  margin-top: 1rem;
+}
+
+.confirmation:target {
+  display: block;
+}
+
+@media (max-width: 575.98px) {
+  .btn-group {
+    display: grid;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .btn-group > .btn {
+    border-radius: 0.375rem !important;
+  }
+}

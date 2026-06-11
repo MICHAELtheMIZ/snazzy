@@ -1,0 +1,10 @@
+# Protect the staff roster folder with HTTP basic authentication.
+AuthType Basic
+AuthName "Snazzy Paws Staff Roster"
+AuthUserFile ".htpasswd"
+Require valid-user
+
+# Prevent direct web access to the password file.
+<Files ".htpasswd">
+  Require all denied
+</Files>

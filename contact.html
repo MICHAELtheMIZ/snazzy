@@ -2,74 +2,117 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Contact Snazzy Paws Grooming in Hamilton or send a message using the online contact form.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Snazzy Paws Grooming</title>
-    <link rel="stylesheet" href="styles.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   </head>
-  <body>
-    <header>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="brand" href="index.html">Snazzy Paws Grooming</a>
-        <input class="nav-toggle" type="checkbox" id="menu-toggle" aria-label="Open navigation menu">
-        <label class="menu-button" for="menu-toggle">Menu</label>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Bootstrap navigation shared across the public pages. -->
+    <header class="bg-white border-bottom sticky-top">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">Snazzy Paws Grooming</a>
 
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="booking.html">Booking</a>
-          <a href="contact.html">Contact</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navigation"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+              <li class="nav-item"><a class="nav-link" href="staff/roster.html">Staff Roster</a></li>
+            </ul>
+            <a class="btn btn-primary ms-lg-3" href="booking.html">Book Now</a>
+          </div>
         </div>
       </nav>
-      <a class="book-strip" href="booking.html">Book Now</a>
     </header>
 
-    <main>
-      <section class="page-hero" aria-labelledby="contact-title">
-        <h1 id="contact-title">Contact Us</h1>
-        <p>We would love to hear from you.</p>
+    <!-- Main contact page content. -->
+    <main class="flex-grow-1">
+      <section class="page-hero py-5" aria-labelledby="contact-title">
+        <div class="container">
+          <h1 class="display-5 fw-bold" id="contact-title">Contact Us</h1>
+          <p class="lead mb-0">We would love to hear from you.</p>
+        </div>
       </section>
 
-      <section class="contact-layout" aria-labelledby="contact-form-title">
-        <div class="form-panel">
-          <h2 id="contact-form-title">Contact Form</h2>
+      <section class="container py-4" aria-labelledby="contact-form-title">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="h4 card-title" id="contact-form-title">Contact Form</h2>
 
-          <form action="#message-sent" method="get">
-            <label for="name">Name</label>
-            <input id="name" required>
+                <form action="#message-sent" method="get">
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold" for="name">Name</label>
+                    <input class="form-control" id="name" required>
+                  </div>
 
-            <label for="contact-email">Email address</label>
-            <input id="contact-email" type="email" required>
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold" for="contact-email">Email address</label>
+                    <input class="form-control" id="contact-email" type="email" required>
+                  </div>
 
-            <label for="phone">Phone number</label>
-            <input id="phone" type="tel">
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold" for="phone">Phone number</label>
+                    <input class="form-control" id="phone" type="tel">
+                  </div>
 
-            <label for="comment">Comment</label>
-            <textarea id="comment" rows="6" required></textarea>
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold" for="comment">Comment</label>
+                    <textarea class="form-control" id="comment" rows="6" required></textarea>
+                  </div>
 
-            <button class="button primary full" type="submit">Send Message</button>
+                  <button class="btn btn-primary w-100" type="submit">Send Message</button>
 
-            <div id="message-sent" class="confirmation" role="status" aria-live="polite">
-              Message sent successfully.
+                  <div id="message-sent" class="alert alert-success confirmation" role="status" aria-live="polite">
+                    Message sent successfully.
+                  </div>
+                </form>
+              </div>
             </div>
-          </form>
-        </div>
+          </div>
 
-        <aside class="map-card" aria-labelledby="map-title">
-          <h2 id="map-title">Hamilton Location Map</h2>
-          <iframe
-            title="Google Map showing Hamilton city centre, New Zealand"
-            src="https://www.google.com/maps?q=Hamilton%20Central%2C%20Hamilton%2C%20New%20Zealand&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </aside>
+          <div class="col-lg-6">
+            <aside class="card h-100" aria-labelledby="map-title">
+              <div class="card-body">
+                <h2 class="h4 card-title" id="map-title">Hamilton Location Map</h2>
+                <iframe
+                  class="map-frame"
+                  title="Google Map showing Hamilton city centre, New Zealand"
+                  src="https://www.google.com/maps?q=Hamilton%20Central%2C%20Hamilton%2C%20New%20Zealand&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </aside>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p><strong>Snazzy Paws Grooming opening hours:</strong> Monday to Saturday, 9:00 am - 5:00 pm.</p>
-      <p>Hamilton, New Zealand</p>
+    <footer class="site-footer mt-auto py-4">
+      <div class="container text-center">
+        <p class="mb-1"><strong>Snazzy Paws Grooming opening hours:</strong> Monday to Saturday, 9:00 am - 5:00 pm.</p>
+        <p class="mb-0">Hamilton, New Zealand</p>
+      </div>
     </footer>
   </body>
 </html>
